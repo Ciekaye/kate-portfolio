@@ -1,10 +1,10 @@
-import { FaEnvelope, FaInstagram, FaLinkedin, FaTwitter, FaArrowUp } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaLinkedin, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 
 const socialLinks = [
   { icon: <FaInstagram />, href: 'https://instagram.com/katecristylsocial', label: 'Instagram' },
   { icon: <FaLinkedin />, href: 'https://linkedin.com/in/katecristyl', label: 'LinkedIn' },
-  { icon: <FaTwitter />, href: 'https://twitter.com/katecristylsocial', label: 'Twitter' },
-  { icon: <FaEnvelope />, href: 'mailto:hello@katecristyl.social', label: 'Email' },
+  { icon: <FaWhatsapp />, href: 'https://wa.me/639474416972', label: 'WhatsApp' },
+  { icon: <FaEnvelope />, href: 'mailto:smm.katecristyl@gmail.com', label: 'Email' },
 ];
 
 const quickLinks = [
@@ -26,7 +26,7 @@ const Footer = () => {
       <div className="container-max section-padding">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <div className="text-3xl font-black mb-4 text-gradient-white">Kate</div>
+            <img src="/Footer_logo.png" alt="Kate Cristyl" className="h-12 w-auto mb-4" />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Helping brands show up with purpose online through strategic social media management and authentic content creation.
             </p>
@@ -64,7 +64,8 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-widest">Get In Touch</h4>
             <div className="space-y-3 text-white/55 text-sm mb-6">
-              <p>hello@katecristyl.social</p>
+              <p>smm.katecristyl@gmail.com</p>
+              <p>+63 947 441 6972</p>
               <p>Response: 24–48 hours</p>
               <p>Available for full-time projects, consulting &amp; content creation</p>
             </div>
@@ -77,7 +78,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 gap-4"
           style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-          <p className="text-white/40 text-sm">© 2024 Kate Cristyl. All rights reserved.</p>
+          <p className="text-white/40 text-sm">© 2026 Kate Cristyl Osorio. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span className="text-white/40 text-sm">Designed for brands</span>
             <button onClick={scrollToTop} aria-label="Back to top"

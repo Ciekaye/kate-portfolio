@@ -49,9 +49,7 @@ export default function Home() {
         <title>Kate Cristyl - Social Media Manager Portfolio</title>
         <meta name="description" content="Social Media Manager Portfolio - Helping brands show up with purpose online" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="icon" href="/KC LOGO.png" />
       </Head>
 
       <div className="min-h-screen bg-light">

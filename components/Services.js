@@ -1,4 +1,4 @@
-import { FiSmartphone, FiClipboard, FiPenTool, FiEdit3, FiLayout, FiMessageSquare, FiBarChart2, FiZap } from 'react-icons/fi';
+import { FiSmartphone, FiClipboard, FiPenTool, FiEdit3, FiLayout, FiMessageSquare, FiBarChart2, FiTrendingUp } from 'react-icons/fi';
 
 const services = [
   { icon: <FiSmartphone size={22} />, title: 'Social Media Management', description: 'Complete management of your social presence with consistent posting, engagement, and brand voice maintenance.' },
@@ -8,7 +8,7 @@ const services = [
   { icon: <FiLayout size={22} />, title: 'Visual Planning', description: 'Aesthetic content calendars and grid planning that create a cohesive, professional brand appearance.' },
   { icon: <FiMessageSquare size={22} />, title: 'Engagement Support', description: 'Active community management — responding to comments, DMs, and fostering meaningful connections.' },
   { icon: <FiBarChart2 size={22} />, title: 'Performance Insights', description: 'Detailed analytics and reporting to track growth and continuously optimize your content strategy.' },
-  { icon: <FiZap size={22} />, title: 'Campaign Support', description: 'End-to-end campaign planning for product launches, promotions, and brand awareness initiatives.' },
+  { icon: <FiTrendingUp size={22} />, title: 'Brand Growth Strategy', description: 'Strategic guidance to help your brand build a stronger online presence and grow your engaged community.' },
 ];
 
 const Services = () => (

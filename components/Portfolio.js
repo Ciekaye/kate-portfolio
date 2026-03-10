@@ -45,7 +45,20 @@ const mediaItems = [
     platform: 'Instagram',
     description: 'Typography-led graphic designed to encourage saves and shares.',
     image: '/portfolio/1.png',
-    size: 'medium',
+    size: 'small',
+    bgGradient: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%)',
+  },
+  {
+    id: 14,
+    type: 'text',
+    category: 'graphics',
+    title: 'Creative Excellence',
+    label: 'Approach',
+    platform: '',
+    description: 'Delivering high-quality designs that capture attention and drive meaningful engagement.',
+    bg: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)',
+    textColor: '#ffffff',
+    size: 'small',
   },
   {
     id: 3,
@@ -57,6 +70,7 @@ const mediaItems = [
     description: 'Promotional post designed for brand awareness and reach.',
     image: '/portfolio/2.png',
     size: 'medium',
+    bgGradient: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%)',
   },
   {
     id: 4,
@@ -67,7 +81,8 @@ const mediaItems = [
     platform: 'Social Media',
     description: 'Branded social content optimised for community interaction.',
     image: '/portfolio/3.png',
-    size: 'large',
+    size: 'medium',
+    bgGradient: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%)',
   },
   {
     id: 5,
@@ -79,6 +94,67 @@ const mediaItems = [
     description: 'Bold visual hook designed to stop the scroll and drive engagement.',
     image: '/portfolio/4.png',
     size: 'medium',
+    bgGradient: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%)',
+  },
+  {
+    id: 6,
+    type: 'graphic',
+    category: 'graphics',
+    title: 'Branded Graphic Design',
+    label: 'Graphic Design',
+    platform: 'Instagram / Facebook',
+    description: 'Professional graphic design showcasing brand identity and visual storytelling.',
+    image: '/GRAPHIC1.png',
+    size: 'medium',
+    bgGradient: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%)',
+  },
+  {
+    id: 12,
+    type: 'post',
+    category: 'social',
+    title: 'Social Media Campaign',
+    label: 'Content Strategy',
+    platform: 'Social Media',
+    description: 'Engaging social media content designed for brand awareness and audience interaction.',
+    image: '/SOCIAL1.png',
+    size: 'small',
+    bgGradient: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%)',
+  },
+  {
+    id: 16,
+    type: 'text',
+    category: 'social',
+    title: 'Consistent Brand Voice',
+    label: 'Strategy',
+    platform: '',
+    description: 'Ensuring every post reflects your brand personality and resonates with your audience.',
+    bg: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)',
+    textColor: '#ffffff',
+    size: 'small',
+  },
+  {
+    id: 17,
+    type: 'text',
+    category: 'social',
+    title: 'Audience-First Approach',
+    label: 'Philosophy',
+    platform: '',
+    description: 'Understanding what your audience needs and creating content that truly connects.',
+    bg: 'linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%)',
+    textColor: '#ffffff',
+    size: 'small',
+  },
+  {
+    id: 18,
+    type: 'text',
+    category: 'social',
+    title: 'Results-Driven Content',
+    label: 'Goal',
+    platform: '',
+    description: 'Every piece of content is crafted with purpose to engage, inform, and grow your brand.',
+    bg: 'linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%)',
+    textColor: '#ffffff',
+    size: 'small',
   },
 ];
 
@@ -125,7 +201,7 @@ const BentoCard = ({ item, className = '', onClick, isPopupOpen }) => {
 
   return (
     <div 
-      className={`group relative rounded-2xl overflow-hidden cursor-pointer ${className}`}
+      className={`group relative rounded-2xl overflow-hidden ${item.type !== 'text' ? 'cursor-pointer' : ''} ${className}`}
       onClick={onClick}
       style={{ background: '#f9fafb', border: '1px solid rgba(168,85,247,0.1)' }}>
 
@@ -152,23 +228,35 @@ const BentoCard = ({ item, className = '', onClick, isPopupOpen }) => {
           >
             {muted ? <FiVolumeX size={16} /> : <FiVolume2 size={16} />}
           </button>
-                  </div>
+        </div>
       ) : (
-        <div className="relative w-full h-full min-h-[300px] flex items-center justify-center p-4">
+        item.type === 'text' ? (
+        <div className="relative w-full h-full min-h-[300px] flex flex-col items-center justify-center p-8 text-center"
+          style={{ background: item.bg || 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)' }}>
+          <p className="text-lg md:text-xl font-bold leading-snug mb-3" style={{ color: item.textColor || '#fff' }}>{item.title}</p>
+          <p className="text-sm leading-relaxed opacity-80" style={{ color: item.textColor || '#fff' }}>{item.description}</p>
+        </div>
+      ) : (
+        <div className="relative w-full h-full min-h-[300px] flex items-center justify-center overflow-hidden"
+          style={{ background: item.bgGradient || 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #ddd6fe 100%)' }}>
           <img
             src={item.image}
             alt={item.title}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03] p-4"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent pointer-events-none" />
         </div>
+      )
       )}
 
+      {item.type !== 'text' && (
       <div className="absolute bottom-0 left-0 right-0 p-5"
         style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)' }}>
         <p className="text-[10px] uppercase tracking-widest text-white/60 mb-1">{item.label}</p>
         <h4 className="text-sm font-bold text-white mb-0.5">{item.title}</h4>
         <p className="text-[11px] text-white/50">{item.platform}</p>
       </div>
+      )}
     </div>
   );
 };
@@ -377,7 +465,7 @@ const Portfolio = () => {
                 key={item.id}
                 item={item}
                 className={`${spanClass} animate-on-scroll`}
-                onClick={() => openPopup(item)}
+                onClick={() => item.type !== 'text' && openPopup(item)}
                 isPopupOpen={!!selectedItem}
               />
             );

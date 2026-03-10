@@ -21,17 +21,13 @@ const About = () => {
 
           {/* Photo — tall card, spans 2 rows on left */}
           <div className="col-span-2 md:col-span-1 md:row-span-2 animate-on-scroll">
-            <div
-              className="rounded-2xl overflow-hidden flex items-center justify-center h-full min-h-[320px]"
-              style={{ background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #c084fc 100%)' }}
-            >
-              <div className="text-center px-4">
-                <div className="w-16 h-16 rounded-full mx-auto mb-3 flex items-center justify-center"
-                  style={{ background: 'rgba(255,255,255,0.5)', border: '2px solid rgba(255,255,255,0.7)' }}>
-                  <span className="text-purple-700 text-xs font-bold uppercase tracking-widest">Photo</span>
-                </div>
-                <p className="text-purple-700/60 font-medium text-[10px] uppercase tracking-widest">Your image here</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden h-full min-h-[320px] flex items-center justify-center"
+              style={{ background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #c084fc 100%)' }}>
+              <img 
+                src="/KATE_ABOUT.png" 
+                alt="Kate Cristyl" 
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
 
@@ -42,16 +38,15 @@ const About = () => {
                 Hi, I&apos;m <span className="text-gradient">Kate Cristyl Osorio</span>
               </h3>
               <p className="text-muted text-sm leading-relaxed mb-3">
-                I have 12 months of experience working as a Customer Service Representative at{' '}
-                <span className="font-semibold text-accent">Alorica Philippines</span>. During that time, I developed strong
-                communication, patience, and problem solving skills while helping customers and handling different concerns in a fast paced environment.
+                I&apos;m a Social Media Manager focused on helping brands grow their online presence through strategic content, audience engagement, and consistent brand communication.
+              </p>
+              <p className="text-muted text-sm leading-relaxed mb-3">
+                Alongside my experience as a Customer Service Representative at{' '}
+                <span className="font-semibold text-accent">Alorica Philippines</span>, I have been actively involved in social media management by assisting my partner with projects for companies and brands from the United States, Australia, the UAE, and Europe.
               </p>
               <p className="text-muted text-sm leading-relaxed">
-                I&apos;m also very active on social media and enjoy observing what kind of content people connect with on platforms like{' '}
-                <span className="font-semibold text-accent">Facebook, TikTok, and Instagram</span>. I&apos;m interested in how brands communicate online and how engaging content can capture attention.
-              </p>
-              <p className="text-muted text-sm leading-relaxed">
-                I believe strong results come from clear communication and good collaboration. I&apos;m committed to delivering quality work and making sure it aligns with each client&apos;s goals.
+                This experience has given me practical exposure to content planning, social media strategy, and audience engagement across different markets. I&apos;m passionate about understanding what connects with audiences on platforms like{' '}
+                <span className="font-semibold text-accent">Facebook, Instagram, and TikTok</span>, and using that insight to help brands build a stronger digital presence.
               </p>
             </div>
           </div>
@@ -128,50 +123,38 @@ const About = () => {
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest text-muted mb-1">Work Experience</p>
                   <h4 className="font-bold text-primary text-base leading-snug">Customer Service Representative</h4>
-                  <p className="text-sm font-semibold text-accent mt-0.5">Alorica Philippines&nbsp;&middot;&nbsp;12 Months</p>
+                  <p className="text-sm font-semibold text-accent mt-0.5">Alorica Philippines · 12 Months</p>
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <ul className="space-y-2">
+              <p className="text-sm text-muted leading-relaxed mb-6">
+                Provided customer support by handling inquiries, resolving concerns, and assisting clients in a fast-paced environment. This role strengthened my communication, problem-solving, and client interaction skills while maintaining professionalism across different situations.
+              </p>
+
+              <div
+                className="rounded-xl p-5"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(168,85,247,0.1), rgba(124,58,237,0.06))',
+                  border: '1px solid rgba(168,85,247,0.15)',
+                }}
+              >
+                <p className="text-xs font-bold uppercase tracking-widest text-accent mb-4">
+                  Skills I Apply to Social Media Management
+                </p>
+                <ul className="space-y-3">
                   {[
-                    'Assisted customers by answering inquiries and resolving concerns professionally',
-                    'Developed strong communication and active listening skills',
-                    'Stayed patient and calm while handling different customer situations',
-                    'Improved problem-solving and quick decision-making skills',
-                    'Maintained professionalism while representing the company',
+                    'Communicating clearly and effectively with online audiences',
+                    'Responding professionally to comments, messages, and customer inquiries',
+                    'Understanding customer needs and audience behavior',
+                    'Maintaining a positive and helpful brand presence online',
+                    'Supporting brands in building trust through responsive communication',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-muted leading-relaxed">
-                      <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      <span className="text-accent mt-0.5 flex-shrink-0">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-
-                <div
-                  className="rounded-xl p-5"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(168,85,247,0.1), rgba(124,58,237,0.06))',
-                    border: '1px solid rgba(168,85,247,0.15)',
-                  }}
-                >
-                  <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">
-                    Skills I Can Apply to Social Media Management
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      'Communicating clearly with an online audience',
-                      'Responding to comments, messages, and inquiries professionally',
-                      'Understanding customer needs and concerns',
-                      'Maintaining a positive and helpful brand presence online',
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-muted leading-relaxed">
-                        <span className="text-accent mt-0.5 flex-shrink-0">&rarr;</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           </div>

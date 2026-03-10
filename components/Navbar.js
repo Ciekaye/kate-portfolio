@@ -41,7 +41,9 @@ const Navbar = ({ scrolled }) => {
       >
         <div className="container-max flex justify-between items-center px-6 sm:px-6 lg:px-8">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gradient">Kate</div>
+          <a href="#home" className="flex items-center">
+            <img src="/KC LOGO.png" alt="Kate Cristyl" className="h-14 w-auto" />
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -104,7 +106,7 @@ const Navbar = ({ scrolled }) => {
 
             {/* Header: Logo + Close */}
             <div className="flex justify-between items-center mb-16">
-              <div className="text-2xl font-bold text-gradient">Kate</div>
+              <img src="/KC LOGO.png" alt="Kate Cristyl" className="h-10 w-auto" />
               <button
                 onClick={() => setIsOpen(false)}
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 active:scale-90"
@@ -150,7 +152,7 @@ const Navbar = ({ scrolled }) => {
                 <FiArrowRight size={18} />
               </button>
 
-              <p className="text-center text-xs text-gray-400 mt-4">hello@katecristyl.social</p>
+              <p className="text-center text-xs text-gray-400 mt-4">smm.katecristyl@gmail.com</p>
             </div>
           </div>
         </div>

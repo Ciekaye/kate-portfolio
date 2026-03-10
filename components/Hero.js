@@ -34,75 +34,89 @@ const Hero = () => {
     >
       <SilkBackground />
 
-      <div className="container-max relative z-10 w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 animate-on-scroll text-center sm:text-left">
-
-        {/* Top label */}
-        <div className="inline-flex items-center gap-2 mb-6 sm:mb-8 px-3 sm:px-4 py-2 rounded-full mx-auto sm:mx-0"
-          style={{
-            background: 'rgba(255,255,255,0.7)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(168,85,247,0.2)',
-          }}>
-          <span className="w-2 h-2 rounded-full bg-accent inline-block" />
-          <span className="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-primary/70">
-            Social Media Manager
-          </span>
-        </div>
-
-        {/* Name — focal point */}
-        <h1 className="overflow-visible" style={{
-          fontSize: 'clamp(2.5rem, 8vw, 7rem)',
-          fontWeight: 900,
-          lineHeight: 1.1,
-          letterSpacing: '-0.02em',
-          marginBottom: 'clamp(0.75rem, 0.875rem, 1rem)',
-          background: 'linear-gradient(135deg, #1a1a2e 0%, #7c3aed 50%, #a855f7 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}>
-          Hi, I'm Kate Cristyl
-        </h1>
-
-        {/* Powerful headline statement */}
-        <p style={{
-          fontSize: 'clamp(1.1rem, 2.5vw, 2rem)',
-          fontWeight: 700,
-          color: '#1a1a2e',
-          marginBottom: 'clamp(1rem, 1.25rem, 1.5rem)',
-          letterSpacing: '-0.02em',
-          lineHeight: 1.1,
-        }}>
-          Helping brands turn content into connection.
-        </p>
-
-        {/* Supporting paragraph */}
-        <p className="text-muted leading-relaxed mb-8 sm:mb-12 max-w-full sm:max-w-[48ch] mx-auto sm:mx-0"
-          style={{ fontSize: 'clamp(0.875rem, 1.25vw, 1.1rem)' }}>
-          I create strategic content, compelling visuals, and thoughtful social media experiences 
-          that help brands stand out and grow online.
-        </p>
-
-        {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center sm:items-start sm:justify-start">
-          <a
-            href="#portfolio"
-            className="inline-flex items-center gap-2 sm:gap-3 justify-center px-6 py-3 sm:px-7 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-gray-900 hover:bg-purple-600 transition-all duration-200"
-          >
-            View My Work
-            <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white/20 flex items-center justify-center text-sm sm:text-base">
-              ↗
-            </span>
-          </a>
+      <div className="container-max relative z-10 w-full px-4 sm:px-6 lg:px-8 pt-32 pb-16 sm:py-20 lg:py-24 animate-on-scroll">
+        <div className="grid lg:grid-cols-2 gap-0 lg:gap-12 items-center">
           
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold text-gray-900 border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-200"
-          >
-            Contact Me
-          </a>
-        </div>
+          {/* Left: Text Content */}
+          <div className="text-center lg:text-left">
+            {/* Top label */}
+            <div className="inline-flex items-center gap-2 mb-6 sm:mb-8 px-3 sm:px-4 py-2 rounded-full mx-auto lg:mx-0"
+              style={{
+                background: 'rgba(255,255,255,0.7)',
+                backdropFilter: 'blur(12px)',
+                border: '1px solid rgba(168,85,247,0.2)',
+              }}>
+              <span className="w-2 h-2 rounded-full bg-accent inline-block" />
+              <span className="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-primary/70">
+                Social Media Manager
+              </span>
+            </div>
 
+            {/* Name — focal point */}
+            <h1 className="overflow-visible whitespace-nowrap" style={{
+              fontSize: 'clamp(2rem, 6vw, 5rem)',
+              fontWeight: 900,
+              lineHeight: 1.2,
+              letterSpacing: '-0.02em',
+              marginBottom: 'clamp(0.75rem, 0.875rem, 1rem)',
+              background: 'linear-gradient(135deg, #1a1a2e 0%, #7c3aed 50%, #a855f7 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
+              Hi, I'm Kate
+            </h1>
+
+            {/* Powerful headline statement */}
+            <p style={{
+              fontSize: 'clamp(1.1rem, 2.5vw, 2rem)',
+              fontWeight: 700,
+              color: '#1a1a2e',
+              marginBottom: 'clamp(1rem, 1.25rem, 1.5rem)',
+              letterSpacing: '-0.02em',
+              lineHeight: 1.1,
+            }}>
+              Helping brands turn content into connection.
+            </p>
+
+            {/* Supporting paragraph */}
+            <p className="text-muted leading-relaxed mb-8 sm:mb-12 max-w-full sm:max-w-[48ch] mx-auto lg:mx-0"
+              style={{ fontSize: 'clamp(0.875rem, 1.25vw, 1.1rem)' }}>
+              I create strategic content, compelling visuals, and thoughtful social media experiences 
+              that help brands stand out and grow online.
+            </p>
+
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center lg:items-start lg:justify-start">
+              <a
+                href="#portfolio"
+                className="inline-flex items-center gap-2 sm:gap-3 justify-center px-6 py-3 sm:px-7 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-gray-900 hover:bg-purple-600 transition-all duration-200"
+              >
+                View My Work
+                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white/20 flex items-center justify-center text-sm sm:text-base">
+                  ↗
+                </span>
+              </a>
+              
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold text-gray-900 border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-200"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+
+          {/* Right: Hero Image */}
+          <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
+            <img 
+              src="/KATE_HERO.png" 
+              alt="Kate" 
+              className="w-full max-w-md lg:max-w-lg xl:max-w-xl h-auto object-contain"
+            />
+          </div>
+
+        </div>
       </div>
     </section>
   );

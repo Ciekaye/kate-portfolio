@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { FaEnvelope, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const contactInfo = [
-  { icon: <FaEnvelope />, label: 'Email', value: 'hello@katecristyl.social', href: 'mailto:hello@katecristyl.social' },
+  { icon: <FaEnvelope />, label: 'Email', value: 'smm.katecristyl@gmail.com', href: 'mailto:smm.katecristyl@gmail.com' },
   { icon: <FaInstagram />, label: 'Instagram', value: '@katecristylsocial', href: 'https://instagram.com/katecristylsocial' },
-  { icon: <FaLinkedin />, label: 'LinkedIn', value: 'Kate Cristyl', href: 'https://linkedin.com/in/katecristyl' },
-  { icon: <FaTwitter />, label: 'Twitter', value: '@katecristylsocial', href: 'https://twitter.com/katecristylsocial' },
+  { icon: <FaLinkedin />, label: 'LinkedIn', value: 'Kate Cristyl Osorio', href: 'https://linkedin.com/in/katecristyl' },
+  { icon: <FaWhatsapp />, label: 'WhatsApp', value: '+63 947 441 6972', href: 'https://wa.me/639474416972' },
 ];
 
 const Contact = () => {
@@ -191,9 +191,9 @@ const Contact = () => {
           </div>
 
           <div className="rounded-2xl p-6 sm:p-8" style={{ background: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)' }}>
-            <h3 className="text-lg font-bold text-white mb-4">What to Expect</h3>
+            <h3 className="text-lg font-bold text-white mb-4">What You Can Expect</h3>
             <ul className="space-y-3 text-sm text-white/85">
-              {['Response within 24–48 hours', 'Free 30-minute consultation call', 'Custom proposal tailored to your needs', 'Transparent pricing and timelines'].map((item) => (
+              {['A response within 24–48 hours', 'A quick discovery conversation to understand your needs', 'A customized social media strategy or proposal', 'Clear communication, timelines, and expectations'].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-white/50 mt-1.5 flex-shrink-0" /><span>{item}</span>
                 </li>
