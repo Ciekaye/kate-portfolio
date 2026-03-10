@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #faf8ff;
+    color: #1a1a2e;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-block bg-gradient-to-r from-accent to-accent2 text-white px-8 py-3 rounded-full font-semibold
+           hover:shadow-lg hover:shadow-purple-400/40 transition-all duration-300 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-block border-2 border-accent text-accent px-8 py-3 rounded-full font-semibold
+           hover:bg-accent hover:text-white transition-all duration-300 hover:-translate-y-0.5;
+  }
+
+  /* ── Layout ── */
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-16;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* ── Glass card ── */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    @apply rounded-2xl shadow-lg shadow-purple-200/30;
+  }
+
+  .glass-card-dark {
+    background: rgba(168, 85, 247, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    @apply rounded-2xl;
+  }
+
+  /* ── Tile grid (inspiration image) ── */
+  .tile-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .tile {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .tile:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.55);
+  }
+
+  /* ── Text gradient ── */
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-white {
+    @apply bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent;
+  }
+
+  /* ── Section accent line ── */
+  .accent-line {
+    @apply w-20 h-1 rounded-full mx-auto mt-4;
+    background: linear-gradient(90deg, #a855f7, #7c3aed);
+  }
+
+  /* ── Scroll animation ── */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Skill bar ── */
+  .skill-bar-track {
+    @apply w-full rounded-full h-2;
+    background: rgba(168, 85, 247, 0.15);
+  }
+
+  .skill-bar-fill {
+    @apply h-2 rounded-full;
+    background: linear-gradient(90deg, #a855f7, #7c3aed);
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ── Form inputs ── */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl outline-none transition-all duration-300 text-primary;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1.5px solid rgba(168, 85, 247, 0.2);
+  }
+  .form-input:focus {
+    border-color: #a855f7;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+  }
+  .form-input::placeholder {
+    color: #9ca3af;
+  }
+}
