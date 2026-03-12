@@ -1,0 +1,3 @@
+{"sessionId":"739b61","runId":"initial","hypothesisId":"H1","location":"pages/api/contact.js:entry","message":"Contact API called","data":{"method":"POST","hasBody":true,"hasName":true,"hasEmail":true,"hasProjectDetails":true,"hasResendKey":true,"hasContactTo":true},"timestamp":1773336908057}
+{"sessionId":"739b61","runId":"initial","hypothesisId":"H2","location":"pages/api/contact.js:beforeSend","message":"Contact API before resend.emails.send","data":{"hasName":true,"hasEmail":true,"hasProjectDetails":true},"timestamp":1773336908060}
+{"sessionId":"739b61","runId":"initial","hypothesisId":"H3","location":"pages/api/contact.js:success","message":"Contact API success","data":{},"timestamp":1773336908088}
