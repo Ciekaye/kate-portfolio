@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import { motion } from 'framer-motion'
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </motion.div>
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
